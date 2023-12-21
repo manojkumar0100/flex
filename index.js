@@ -10,10 +10,6 @@ const PORT = process.env.PORT || 9000;
 
 app.use(bodyParser.json());
 
-// app.use(cors({
-//   origin: 'http://localhost:3000', // Replace 3000 with your actual frontend port
-//   credentials: true,
-// }));
 
 
 app.use(cors({origin:true, credentials: true}));

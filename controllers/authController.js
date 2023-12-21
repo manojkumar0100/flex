@@ -10,26 +10,6 @@ const uuid = require('uuid');
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Register Controller
 const registerController = async (req, res) => {
   try {
@@ -87,25 +67,6 @@ const registerController = async (req, res) => {
     });
   }
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -175,27 +136,6 @@ const loginController = async (req, res) => {
     });
   }
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -335,23 +275,6 @@ const payment = async (req, res) => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // get batches 
 const getAllBatch = async (req, res) => {
   try {
@@ -364,17 +287,6 @@ const getAllBatch = async (req, res) => {
     res.status(500).json({ error: 'Internal Server Error'});
   }
 };
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -458,25 +370,6 @@ const checkEnrollment = async (req, res) => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const userdata = async (req, res) => {
   try {
     const userId = req.user._id;
@@ -522,43 +415,6 @@ const userdata = async (req, res) => {
 };
 
 
-
-// const changeBatch = async (req, res) => {
-//      const userId = req.user._id;
-//      const { batchId } = req.body;
-// };
-
-// const changeBatch = async (req, res) => {
-//   try {
-//     const userId = req.user._id;
-//     const { batchId } = req.body;
-
-//     // Check if the user is authenticated
-//     if (!userId) {
-//       return res.status(401).json({ success: false, message: 'Unauthorized: User not authenticated' });
-//     }
-
-//     // Validate the provided batchId
-//     if (batchId === undefined) {
-//       return res.status(400).json({ success: false, message: 'Invalid batch information' });
-//     }
-
-//     // Check if the provided batchId exists in the 'batch' table
-//     const [checkingBatch] = await queryAsync('SELECT * FROM batch WHERE BatchID = ?', [batchId]);
-
-//     if (checkingBatch===undefined) {
-//       return res.status(400).json({ success: false, message: 'Invalid batch, enter a valid batch' });
-//     }
-
-//     // Update the user's enrolled batch in the 'payment' table
-//     await queryAsync('UPDATE payment SET BatchID = ? WHERE UserID = ?', [batchId, userId]);
-
-//     return res.status(200).json({ success: true, message: 'User batch changed successfully', newBatchId: batchId });
-//   } catch (error) {
-//     console.error('Error changing user batch:', error);
-//     res.status(500).json({ success: false, message: 'Internal server error' });
-//   }
-// };
 
 
 const changeBatch = async (req, res) => {
