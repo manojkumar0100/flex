@@ -3,10 +3,17 @@ const mysql = require('mysql2/promise');
 const pool = mysql.createPool({
   
 
-  host: 'localhost',
-  user: 'root',
-  database: 'flex',
+  // host: 'localhost',
+  // user: 'root',
+  // database: 'flex',
+  // port     : '3306'
+   host     : 'bcz0rqlcszpmyxwajhoy-mysql.services.clever-cloud.com',
+  user     : 'uudiwh6yoyi3ed5n',
+   password : '6BGzV8wIabqLJFBKZkQi',
+  database : 'bcz0rqlcszpmyxwajhoy',
   port     : '3306'
+  
+  
 });
 
 
